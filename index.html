@@ -68,6 +68,33 @@
             <img src="img/clojure_spec.png" style="background-color: #cccccc;"/>
           </section>
         </section>
+        <section>
+          <section>
+            <h3>Q: What does it mean to embrace Java?</h3>
+          </section>
+          <section>
+            <h3>A: 222852 Java libraries in GitHub (Q4/14)</h3>
+            <!-- http://githut.info/ -->
+            <pre class="clojure"><code data-trim data-noescape>
+(doto (AmazonS3Client.)
+  (.withEndpoint custom-end-point)
+  (.setS3ClientOptions (-> (S3ClientOptions.)
+                           (.withPathStyleAccess true)))))
+            </code></pre>
+            <!-- Calling Clojure code from Java -->
+          </section>
+          <section>
+            <h3>A: JVM</h3>
+            <ul>
+              <li>Robust</li>
+              <li>Performance</li>
+              <li>Monitoring & profiling</li>
+            </ul>
+          </section>
+          <section>
+            <h3>We need more native Clojure libraries, case clj-http and cheshire</h3>
+          </section>
+        </section>
 
 
 			</div>
