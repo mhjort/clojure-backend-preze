@@ -40,12 +40,10 @@
           </section>
           <section>
             <h3>A: My work 2013-2017</h3>
-            <h4>Polyglot backend services</h4>
+            <h4>Polyglot backend microservices à la DevOps</h4>
             <ul>
-              <li>Clojure (JVM), Scala, Node.js @ Yle</li>
-              <li>Clojure (JVM), Rails, Node.js @ Adtile</li>
-              <li>Microservices</li>
-              <li>DevOps</li>
+              <li>Yle: Clojure (JVM), Scala, Node.js</li>
+              <li>Adtile: Clojure (JVM), Rails, Node.js</li>
             </ul>
           </section>
         </section>
@@ -86,6 +84,55 @@
             </code></pre>
           </section>
           <section>
+            <h3>Robust Tech for Senior Developers</h3>
+          </section>
+          <section>
+            <h3>Q: How we run our code?</h3>
+          </section>
+          <section>
+            <h3>Option 1: Uberjar with embedded http-kit or Jetty</h3>
+          </section>
+          <section>
+            <h3>Option 2: AWS Lambda function</h3>
+          </section>
+          <section>
+            <h3>Q: How do we select the libraries we use?</h3>
+          </section>
+          <section>
+            <h3>Prio 1: clojure.core</h3>
+          </section>
+          <section>
+            <h3>Prio 2: Native Clojure libraries</h3>
+            <h4>e.g. ring, hiccup</h4>
+          </section>
+          <section>
+            <h3>Prio 3: Clojure libraries with minimal dependencies</h3>
+            <h4>e.g. http-kit</h4>
+          </section>
+          <section>
+            <h3>Prio 4: Simple wrappers around Java API</h3>
+            <h4>e.g. clj-http, clj-time</h4>
+          </section>
+          <section>
+            <h3>Prio 5: Java APIs directly</h3>
+            <h4>AWS Java APIs instead of bloated Amazonica</h4>
+          </section>
+          <section>
+            <h3>Q: How do we test Clojure code?</h3>
+          </section>
+          <section>
+            <h3>clojure.test</h3>
+          </section>
+          <section>
+            <h3>Stubbing using with-redefs</h3>
+          <pre class="clojure"><code data-trim data-noescape>
+(deftest returns-error-when-replication-fails
+  (with-redefs [s3/upload (fn [& _]
+                            (throw (Exception. "Simulated")))]
+      (run-the-test)))
+          </code></pre>
+          </section>
+          <section>
             <h3>Q: How do we maintain large code bases without types?</h3>
           </section>
           <section>
@@ -105,8 +152,6 @@
             <img src="img/clojure_spec.png" style="background-color: #cccccc;"/>
           </section>
         </section>
-
-
 			</div>
 		</div>
     <div style="position: absolute; bottom: 50px; right: 120px;">
