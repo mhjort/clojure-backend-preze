@@ -87,7 +87,7 @@
             <h3>Robust Tech for Senior Developers</h3>
           </section>
           <section>
-            <h3>Q: How we run our code?</h3>
+            <h3>Q: How do we run our code?</h3>
           </section>
           <section>
             <h3>Option 1: Uberjar with embedded http-kit or Jetty</h3>
@@ -148,8 +148,48 @@
           <section>
             <h3>Schema validation</h3>
             <img src="img/prismatic_schema.png" style="background-color: #cccccc;"/>
-            <img src="img/json_schema.png" style="background-color: #cccccc;"/>
-            <img src="img/clojure_spec.png" style="background-color: #cccccc;"/>
+          </section>
+          <section>
+            <h3>Q: How do we manage state?</h3>
+          </section>
+          <section>
+            <h3>atom(s)</h3>
+            <pre class="clojure"><code data-trim data-noescape>
+(defonce ads (atom {}))
+
+(defn update-state []
+  (try
+    (reset! ads (get-all-ads))
+    (info "Updated ads data with" (count @ads) "ads.")
+    (catch Exception e
+      (error e "Failed to update ads"))))
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Clojure is an opinionated language</h2>
+          </section>
+          <section>
+            <h2>maybe you should be too</h2>
+            <img src="img/question.png" width="30%"/>
+          </section>
+          <section>
+            <h2>Thanks!</h2>
+            <ul>
+              <li>github.com/mhjort</li>
+              <li><b>@mhjort</b> at clojurians.slack.com</li>
+              <li>@mhjort</li>
+            </ul>
+            <p>
+            <small>
+            Images from Wikimedia Commons:
+            <ul>
+              <li>By Symbol question.svg: Erin Silversmith  derivative work: Kayau (Symbol question.svg:) [Public domain], via Wikimedia Commons:
+              </li>
+            </ul>
+            </small>
+            </p>
           </section>
         </section>
 			</div>
