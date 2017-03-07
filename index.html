@@ -56,7 +56,7 @@
           </section>
           <section>
             <h3>A: 222852 Java libraries in GitHub (Q4/14)</h3>
-            <p><small>http://githut.info/</small></p>
+            <p><small>http://githut.info</small></p>
           </section>
           <section>
             <h3>A: Embrace the host language</h3>
@@ -84,7 +84,7 @@
             </code></pre>
           </section>
           <section>
-            <h3>Robust Tech for Senior Developers</h3>
+            <h3>Robust Tech for <span style="text-decoration:line-through;">Grumpy Old</span> Senior Developers</h3>
           </section>
           <section>
             <h3>Q: How do we run our code?</h3>
@@ -94,6 +94,7 @@
           </section>
           <section>
             <h3>Option 2: AWS Lambda function</h3>
+            <img src="img/AWS_Simple_Icons_Compute_AWSLambda.svg"/>
           </section>
           <section>
             <h3>Q: How do we select the libraries we use?</h3>
@@ -112,10 +113,26 @@
           <section>
             <h3>Prio 4: Simple wrappers around Java API</h3>
             <h4>e.g. clj-http, clj-time</h4>
+            <pre class="clojure"><code data-trim data-noescape>
+[clj-http "3.4.1"]
+  [commons-codec "1.10"]
+  [commons-io "2.5"]
+  [org.apache.httpcomponents/httpasyncclient "4.1.2"]
+    [org.apache.httpcomponents/httpcore-nio "4.4.5"]
+  [org.apache.httpcomponents/httpclient "4.5.2"]
+    [commons-logging "1.2"]
+  [org.apache.httpcomponents/httpcore "4.4.5"]
+  [org.apache.httpcomponents/httpmime "4.5.2"]
+  [potemkin "0.4.3"]
+    [clj-tuple "0.2.2"]
+    [riddley "0.1.12"]
+  [slingshot "0.12.2"]
+            </code></pre>
           </section>
           <section>
             <h3>Prio 5: Java APIs directly</h3>
-            <h4>AWS Java APIs instead of bloated Amazonica</h4>
+            <h4>e.g AWS Java SDK instead of Amazonica</h4>
+            <img src="img/amazonica.png" width="60%"/>
           </section>
           <section>
             <h3>Q: How do we test Clojure code?</h3>
@@ -137,6 +154,7 @@
           </section>
           <section>
             <h3>A: We don't :D</h3>
+            <img src="img/acrobate.jpg"/>
           </section>
           <section>
             <h3>Typesystem not mature enough</h3>
@@ -171,25 +189,18 @@
             <h2>Clojure is an opinionated language</h2>
           </section>
           <section>
-            <h2>maybe you should be too</h2>
+            <h2>Maybe you should be too</h2>
             <img src="img/question.png" width="30%"/>
           </section>
           <section>
             <h2>Thanks!</h2>
+            <img src="img/mhjort.jpg"/>
+            <h4>@mhjort</h4>
             <ul>
-              <li>github.com/mhjort</li>
-              <li><b>@mhjort</b> at clojurians.slack.com</li>
-              <li>@mhjort</li>
+              <lh><small>Contributions</small></lh>
+              <li><small>By Symbol question.svg: Erin Silversmith  derivative work: Kayau (Symbol question.svg:) [Public domain], via Wikimedia Commons:</small></li>
+              <li><small>By Muriel blondeau (collection de l'auteur) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</small></li>
             </ul>
-            <p>
-            <small>
-            Images from Wikimedia Commons:
-            <ul>
-              <li>By Symbol question.svg: Erin Silversmith  derivative work: Kayau (Symbol question.svg:) [Public domain], via Wikimedia Commons:
-              </li>
-            </ul>
-            </small>
-            </p>
           </section>
         </section>
 			</div>
